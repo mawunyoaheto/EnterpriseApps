@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+             version="2.2">
+    <persistence-unit name="CAR-DB_PU">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>models.Person</class>
+        <class>models.Vehicle</class>
+        <class>models.Factory</class>
+        <class>models.InsuranceCompany</class>
+        <class>models.Address</class>
+        <class>models.Car</class>
+        <class>models.Van</class>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/car"/>
+            <property name="javax.persistence.jdbc.user" value="ea"/>
+            <property name="javax.persistence.jdbc.password" value="cs544"/>
+            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+        </properties>
+    </persistence-unit>
+</persistence>
